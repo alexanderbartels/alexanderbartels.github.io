@@ -48,7 +48,7 @@
     </header>
 
 
-    <div class="content-area">
+    <div id="main" role="main" class="content-area">
 
       <div class="panel">
         <h2>Eine Überschrift</h2>
@@ -56,8 +56,13 @@
           Beschreibung
         </p>
       </div>
-      
+
     </div>
+
+
+    <footer>
+      {% include svg-icons.html %}
+    </footer>
 
     <div class="wrapper-masthead">
       <div class="container">
@@ -81,13 +86,6 @@
       {{ content }}
     </div>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
 
     {% include analytics.html %}
   </body>
