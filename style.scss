@@ -23,6 +23,41 @@ body {
   color: $darkGray;
 }
 
+
+header {
+  .site-name,
+  .site-avatar {
+    display: block;
+  }
+
+  .site-avatar {
+    margin: auto;
+    width: 80px;
+
+    img {
+      display: inline-block;
+      border-radius: 40px;
+    }
+  }
+
+  h1 {
+    display: block;
+    text-align: center;
+    margin: 0;
+
+    line-height: 1.4;
+    font: 1.2em $baseFont;
+    font-weight: 100;
+    text-transform: uppercase;
+
+    b {
+      font-weight: 400;
+      margin-left: 1px;
+    }
+  }
+}
+
+
 .container {
   margin: 0 auto;
   max-width: 740px;
