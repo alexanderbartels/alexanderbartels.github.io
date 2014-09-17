@@ -61,7 +61,22 @@
 
 
     <footer>
-      {% include svg-icons.html %}
+      <div class="footer-site-info">
+        <a href="{{ site.baseurl }}/" class="site-avatar">
+          <img src="{{ site.avatar }}" />
+        </a>
+        <a href="{{ site.baseurl }}/" class="site-name">
+          <h5>ALEXANDER<b>BARTELS</b></h5>
+        </a>
+      </div>
+
+      <div class="footer-social">
+        {% include svg-icons.html %}
+      </div>
+
+      <div class="copyright-info">
+        <p>© 2014 All rights reserved.</p>
+      </div>
     </footer>
 
     <!--
@@ -88,7 +103,7 @@
     </div>
 
   -->
-  
+
     {% include analytics.html %}
   </body>
 </html>
