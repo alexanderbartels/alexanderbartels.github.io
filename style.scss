@@ -25,6 +25,9 @@ body {
 
 
 header {
+
+  padding-top: 50px;
+
   .site-name,
   .site-avatar {
     display: block;
@@ -58,6 +61,10 @@ header {
   }
 }
 
+.content-area {
+  background: $lightGrey;
+  padding-top: 30px;
+}
 
 .container {
   margin: 0 auto;
