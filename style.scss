@@ -272,8 +272,15 @@ footer {
   width: 100%;
 
   .footer-site-info {
-    margin-left: 5%;
-    display: inline-block;
+    margin-left: 15px;
+    display: block;
+    float: left;
+  }
+
+  .footer-social {
+    margin-right: 15px;
+    display: block;
+    float: right;
   }
 
   .site-name,
