@@ -1,0 +1,27 @@
+
+@keyframes bgFadeOut {
+  0% {
+    background-color: $lightGray;
+  }
+  100% {
+    background-color: $white;
+  }
+}
+
+@keyframes containerOpacityFadeIn {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes containerPosFadeIn {
+  0% {
+    transform: translate(50px, 50px)
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

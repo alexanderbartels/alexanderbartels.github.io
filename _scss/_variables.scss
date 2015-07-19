@@ -22,13 +22,16 @@ $footerBackground: #444;
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,700);
 
 $baseFont: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
 
 // Mobile breakpoints
+@mixin tablet {
+  @media screen and (min-width: 440px) and (max-width: 750px) {
+    @content;
+  }
+}
+
 @mixin mobile {
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 440px) {
     @content;
   }
 }

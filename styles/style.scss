@@ -1,0 +1,173 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+//
+// IMPORTS
+//
+@import "_reset";
+@import "_variables";
+@import "_animation";
+// Syntax highlighting @import is at the bottom of this file
+
+/**************/
+/* BASE RULES */
+/**************/
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background: $baseBackground;
+  font: 1rem $baseFont;
+  color: $darkGray;
+  min-width: 320px;
+
+  animation: bgFadeOut 2.5s;
+}
+
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  top: 25vh;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  animation: containerOpacityFadeIn 0.5s, containerPosFadeIn 0.75s ease-out;
+}
+
+.profile-container {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+
+.name {
+  display: block;
+  text-align: center;
+  margin: 0;
+
+  line-height: 2.9rem;
+  font-family: $baseFont;
+
+  font-size: 2.75rem;
+
+  font-weight: 100;
+  text-transform: uppercase;
+  color: $darkGray;
+
+  overflow: hidden;
+
+  b {
+    font-weight: 400;
+    margin-left: 1px;
+  }
+
+  @include tablet {
+    font-size: 2rem;
+  }
+
+  @include mobile {
+    font-size: 1.75rem;
+  }
+}
+
+.site-name {
+  display: inline-block;
+  align-self: center;
+}
+
+.site-avatar {
+  display: inline-block;
+  margin-right: 1rem;
+  flex: none;
+  align-self: center;
+
+  img {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    border-radius: 40px;
+  }
+}
+
+.footer-social {
+  margin: 0.5rem 1.5rem;
+  padding: 1rem;
+  text-align: right;
+  border-top: 3px solid $gray;
+}
+
+.footer-social > a {
+  margin-left: 1rem;
+}
+
+//
+// common styles for common tags
+//
+a {
+  display: inline-block;
+  color: $blue;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover, &:active {
+    color: $blue;
+  }
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+// Specify the color of the selection
+::-moz-selection {
+  color: $black;
+  background: lighten($blue, 10);
+}
+
+::selection {
+  color: $black;
+  background: lighten($blue, 10);
+}
+
+// Nicolas Gallagher's micro clearfix hack
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+// @import "_highlights";
