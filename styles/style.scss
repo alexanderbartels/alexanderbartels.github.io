@@ -40,9 +40,16 @@ body {
   top: 25vh;
   position: relative;
 
-  display: flex;
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+
+  -webkit-flex-direction: column;
   flex-direction: column;
+
+  -webkit-justify-content: center;
   justify-content: center;
+
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 
   animation: containerOpacityFadeIn 0.5s, containerPosFadeIn 0.75s ease-out;
@@ -50,11 +57,18 @@ body {
 
 .profile-container {
   padding: 0 1rem;
-  display: flex;
+
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+
+  -webkit-flex-direction: row;
   flex-direction: row;
+
+  -webkit-align-self: center;
   align-self: center;
 
   @include mobile {
+    -webkit-flex-direction: column;
     flex-direction: column;
   }
 }
@@ -92,13 +106,21 @@ body {
 
 .site-name {
   display: inline-block;
+
+  -webkit-align-self: center;
   align-self: center;
 }
 
 .site-avatar {
   display: inline-block;
   margin-right: 1rem;
+
+  -webkit-box-flex: 0;   /* OLD - iOS 6-, Safari 3.1-6 */
+  -webkit-flex: 0;       /* Safari 6.1+. iOS 7.1+, BB10 */
+  -ms-flex: 0;           /* IE 10 */
   flex: none;
+
+  -webkit-align-self: center;
   align-self: center;
 
   img {
