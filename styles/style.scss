@@ -115,9 +115,7 @@ body {
   display: inline-block;
   margin-right: 1rem;
 
-  -webkit-box-flex: 0;   /* OLD - iOS 6-, Safari 3.1-6 */
-  -webkit-flex: 0;       /* Safari 6.1+. iOS 7.1+, BB10 */
-  -ms-flex: 0;           /* IE 10 */
+  -webkit-flex: none;       /* Safari 6.1+. iOS 7.1+, BB10 */
   flex: none;
 
   -webkit-align-self: center;
