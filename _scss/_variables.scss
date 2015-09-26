@@ -19,9 +19,9 @@ $baseBackground: $white;
 $footerBackground: #444;
 
 // Font stacks
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,700);
+// @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,700);
 
-$baseFont: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$baseFont: sans-serif, "Helvetica Neue", Helvetica, Arial;
 
 // Mobile breakpoints
 @mixin tablet {
