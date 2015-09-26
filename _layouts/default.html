@@ -15,7 +15,13 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/style.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/style.css" /> -->
+    <style type="text/css">
+      {% capture include_to_scssify %}
+        {% include style.scss %}
+      {% endcapture %}
+      {{ include_to_scssify | scssify }}
+    </style>
   </head>
 
   <body>

@@ -1,14 +1,9 @@
----
-# this ensures Jekyll reads the file to be transformed into CSS later
-# only Main files contain this front matter, not partials.
----
 //
 // IMPORTS
 //
 @import "_reset";
 @import "_variables";
 @import "_animation";
-// Syntax highlighting @import is at the bottom of this file
 
 /**************/
 /* BASE RULES */
