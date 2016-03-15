@@ -12,12 +12,20 @@ build:
     - script:
         name: generate site
         code: bundle exec jekyll build --trace
+    - script:
+        name: show info
+        code: |
+          ls -la
 deploy:
   steps:
     - add-ssh-key:
         keyname: DO_KEY
     - add-to-known_hosts:
         hostname: 46.101.208.165
+    - script:
+        name: show info
+        code: |
+          ls -la
     - script:
         name: sync with remote
         code: scp -r _sites/ root@46.101.208.165:/docker-registry/nginx_www/alexanderbartels-com
