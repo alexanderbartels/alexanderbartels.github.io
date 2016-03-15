@@ -28,4 +28,4 @@ deploy:
           ls -la
     - script:
         name: sync with remote
-        code: scp -r _sites/ root@46.101.208.165:/docker-registry/nginx_www/alexanderbartels-com
+        code: scp -r _site/ root@46.101.208.165:/docker-registry/nginx_www/alexanderbartels-com
