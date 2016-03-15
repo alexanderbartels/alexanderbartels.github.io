@@ -15,7 +15,7 @@ build:
 deploy:
   steps:
     - add-ssh-key:
-        keyname: production-digitalocean-ssh
+        keyname: DO_KEY
     - add-to-known_hosts:
         hostname: 46.101.208.165
     - script:
