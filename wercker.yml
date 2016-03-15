@@ -14,6 +14,13 @@ build:
         code: bundle exec jekyll build --trace
 deploy:
   steps:
+    - mktemp:
+        envvar: PRIVATEKEY_PATH
+    - create-file:
+        name: write key
+        filename: $PRIVATEKEY_PATH
+        content: $DO_SSH_KEY_PRIVATE
+        overwrite: true
     - script:
         name: sync with remote
-        code: scp -i $DO_SSH_KEY_PRIVATE -r _sites/ root@46.101.208.165:/docker-registry/nginx_www/alexanderbartels-com
+        code: scp -i $PRIVATEKEY_PATH -r _sites/ root@46.101.208.165:/docker-registry/nginx_www/alexanderbartels-com
