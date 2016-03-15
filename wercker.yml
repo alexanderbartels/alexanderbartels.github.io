@@ -12,3 +12,8 @@ build:
     - script:
         name: generate site
         code: bundle exec jekyll build --trace
+deploy:
+  steps:
+    - script:
+        name: sync with remote
+        code: scp -i $DO_SSH_KEY_PRIVATE -r _sites/ root@46.101.208.165:/docker-registry/nginx_www/alexanderbartels-com
