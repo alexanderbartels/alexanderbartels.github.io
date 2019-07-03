@@ -44,3 +44,5 @@ exclude:
 
 include:
     - _redirects
+    - Handout-komplett.pdf
+
